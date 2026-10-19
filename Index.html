@@ -1,0 +1,284 @@
+Created by Pakfailearning
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Menentukan Ide Pokok</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            gap: 20px;
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+        .text-panel {
+            flex: 1;
+            min-width: 350px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+        .quiz-panel {
+            flex: 1.2;
+            min-width: 350px;
+        }
+        .question-card {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        p.paragraph {
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        .paragraph-num {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 12px 0;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        label:hover {
+            background: #f0f8ff;
+            border-color: #3498db;
+        }
+        input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.2);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            line-height: 1.5;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-left: 5px solid #dc3545;
+        }
+        .final-score {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            display: none;
+        }
+        @media (max-width: 850px) {
+            .text-panel {
+                position: relative;
+                height: auto;
+                top: 0;
+                max-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Latihan Membaca: Menentukan Ide Pokok</h1>
+    </div>
+
+    <div class="container">
+        <!-- Teks Bacaan yang tetap terlihat di sisi kiri pada desktop -->
+        <div class="text-panel">
+            <h2>Teks Cerita Pribadi</h2>
+            <p class="paragraph"><span class="paragraph-num">[1]</span> Liburan semester lalu, aku memutuskan untuk pulang ke kampung halamanku di Bukittinggi. Perjalanan dari Jakarta memakan waktu sekitar dua jam menggunakan pesawat. Sesampainya di bandara, udara sejuk langsung menyapa wajahku dengan lembut. Keluargaku sudah menunggu di pintu kedatangan dengan senyum mengembang. Aku merasa sangat bahagia bisa kembali berkumpul dengan orang-orang tercinta.</p>
+            <p class="paragraph"><span class="paragraph-num">[2]</span> Keesokan harinya, aku diajak mengunjungi Ngarai Sianok yang sangat terkenal itu. Pemandangan lembah hijau yang membentang luas sungguh memanjakan mata. Kami menyempatkan diri untuk berfoto bersama dengan latar belakang tebing curam tersebut. Angin sepoi-sepoi membuat suasana terasa semakin damai dan menenangkan hati. Kunjungan ini benar-benar menyegarkan pikiranku dari kepenatan rutinitas kota.</p>
+            <p class="paragraph"><span class="paragraph-num">[3]</span> Selain menikmati alam, aku juga tidak melewatkan kesempatan untuk berwisata kuliner. Nasi Kapau menjadi hidangan pertama yang aku cari saat tiba di pusat kota. Aroma bumbu rempah yang khas langsung membuat perutku keroncongan seketika. Aku memesan seporsi nasi dengan gulai tambusu yang rasanya sangat gurih. Kelezatan makanan tradisional ini memang tidak ada duanya di tempat lain.</p>
+            <p class="paragraph"><span class="paragraph-num">[4]</span> Pada hari ketiga, kami pergi ke Pasar Atas untuk mencari beberapa suvenir. Pasar ini sangat ramai oleh pengunjung yang ingin membeli kerajinan tangan lokal. Aku berkeliling mencari kain songket dengan motif tradisional yang indah. Setelah tawar-menawar yang cukup alot, aku berhasil mendapatkan harga yang cocok. Beberapa potong kain dan camilan khas akhirnya memenuhi kantong belanjaanku hari itu.</p>
+            <p class="paragraph"><span class="paragraph-num">[5]</span> Tidak terasa, waktu satu minggu berlalu begitu cepat tanpa kusadari. Hari ini aku harus mengemas barang bawaanku untuk kembali ke Jakarta. Ada perasaan sedih yang menyelinap saat harus berpamitan dengan keluargaku lagi. Namun, aku juga membawa pulang banyak kenangan manis dari liburan kali ini. Aku berjanji akan kembali mengunjungi kampung halamanku pada liburan tahun depan.</p>
+        </div>
+        
+        <!-- Kolom Kuis di sisi kanan -->
+        <div class="quiz-panel">
+            <form id="quizForm">
+                
+                <div class="question-card">
+                    <h3>Soal 1</h3>
+                    <p>Ide pokok dari <strong>paragraf pertama</strong> adalah...</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q1" value="A"> A. Perjalanan menggunakan pesawat dari Jakarta memakan waktu dua jam.</label></li>
+                        <li><label><input type="radio" name="q1" value="B"> B. Udara sejuk menyambut kedatangan penulis di bandara.</label></li>
+                        <li><label><input type="radio" name="q1" value="C"> C. Penulis pulang ke kampung halamannya di Bukittinggi saat liburan semester.</label></li>
+                        <li><label><input type="radio" name="q1" value="D"> D. Keluarga penulis sudah menunggu di pintu kedatangan dengan bahagia.</label></li>
+                    </ul>
+                    <div id="res1" class="result"></div>
+                </div>
+
+                <div class="question-card">
+                    <h3>Soal 2</h3>
+                    <p>Ide pokok dari <strong>paragraf kedua</strong> adalah...</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q2" value="A"> A. Penulis mengunjungi Ngarai Sianok yang menyegarkan pikiran.</label></li>
+                        <li><label><input type="radio" name="q2" value="B"> B. Pemandangan lembah hijau di Ngarai Sianok sangat memanjakan mata.</label></li>
+                        <li><label><input type="radio" name="q2" value="C"> C. Penulis dan keluarganya berfoto dengan latar belakang tebing curam.</label></li>
+                        <li><label><input type="radio" name="q2" value="D"> D. Angin sepoi-sepoi di lembah membuat suasana menjadi sangat damai.</label></li>
+                    </ul>
+                    <div id="res2" class="result"></div>
+                </div>
+
+                <div class="question-card">
+                    <h3>Soal 3</h3>
+                    <p>Ide pokok dari <strong>paragraf ketiga</strong> adalah...</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q3" value="A"> A. Aroma bumbu rempah Nasi Kapau membuat perut penulis keroncongan.</label></li>
+                        <li><label><input type="radio" name="q3" value="B"> B. Pengalaman penulis berwisata kuliner menikmati Nasi Kapau.</label></li>
+                        <li><label><input type="radio" name="q3" value="C"> C. Penulis memesan seporsi nasi dengan gulai tambusu yang sangat gurih.</label></li>
+                        <li><label><input type="radio" name="q3" value="D"> D. Kelezatan makanan tradisional Bukittinggi tidak ada duanya.</label></li>
+                    </ul>
+                    <div id="res3" class="result"></div>
+                </div>
+
+                <div class="question-card">
+                    <h3>Soal 4</h3>
+                    <p>Ide pokok dari <strong>paragraf keempat</strong> adalah...</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q4" value="A"> A. Pasar Atas sangat ramai dikunjungi oleh pembeli kerajinan tangan lokal.</label></li>
+                        <li><label><input type="radio" name="q4" value="B"> B. Penulis melakukan proses tawar-menawar yang cukup alot dengan pedagang.</label></li>
+                        <li><label><input type="radio" name="q4" value="C"> C. Beberapa potong kain dan camilan memenuhi kantong belanjaan penulis.</label></li>
+                        <li><label><input type="radio" name="q4" value="D"> D. Kegiatan penulis mencari dan membeli suvenir di Pasar Atas.</label></li>
+                    </ul>
+                    <div id="res4" class="result"></div>
+                </div>
+
+                <div class="question-card">
+                    <h3>Soal 5</h3>
+                    <p>Ide pokok dari <strong>paragraf kelima</strong> adalah...</p>
+                    <ul class="options">
+                        <li><label><input type="radio" name="q5" value="A"> A. Berakhirnya liburan dan persiapan penulis kembali ke Jakarta.</label></li>
+                        <li><label><input type="radio" name="q5" value="B"> B. Waktu satu minggu berlalu begitu cepat tanpa disadari oleh penulis.</label></li>
+                        <li><label><input type="radio" name="q5" value="C"> C. Perasaan sedih saat penulis berpamitan dengan keluarganya.</label></li>
+                        <li><label><input type="radio" name="q5" value="D"> D. Penulis berjanji akan mengunjungi kampung halamannya tahun depan.</label></li>
+                    </ul>
+                    <div id="res5" class="result"></div>
+                </div>
+
+                <button type="button" onclick="checkAnswers()">Periksa Jawaban</button>
+                <div id="final-score" class="final-score"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            // Kunci Jawaban dan Pembahasan
+            const answers = {
+                q1: { correct: 'C', explanation: 'Gagasan utama paragraf pertama adalah kepulangan penulis ke kampung halaman. Kalimat lainnya (pesawat, udara sejuk, keluarga menunggu) merupakan kalimat penjelas.' },
+                q2: { correct: 'A', explanation: 'Gagasan utama paragraf kedua adalah kunjungan ke Ngarai Sianok. Pemandangan, berfoto, dan angin sepoi-sepoi adalah rincian dari kunjungan tersebut.' },
+                q3: { correct: 'B', explanation: 'Gagasan utama paragraf ketiga membahas wisata kuliner (Nasi Kapau). Aroma bumbu, gulai tambusu, dan pujian kelezatan adalah detail pendukung.' },
+                q4: { correct: 'D', explanation: 'Gagasan utama paragraf keempat adalah mencari suvenir di Pasar Atas. Suasana pasar, tawar-menawar, dan hasil belanjaan adalah kalimat penjelas.' },
+                q5: { correct: 'A', explanation: 'Gagasan utama paragraf kelima adalah berakhirnya masa liburan (mengemas barang untuk ke Jakarta). Kesedihan, kenangan, dan janji kembali adalah pelengkap suasana kepulangan.' }
+            };
+
+            let score = 0;
+            let allAnswered = true;
+
+            for (let i = 1; i <= 5; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const resultDiv = document.getElementById('res' + i);
+                
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result'; // Reset class
+
+                if (!selected) {
+                    resultDiv.innerHTML = '<strong>Silakan pilih jawaban terlebih dahulu!</strong>';
+                    resultDiv.classList.add('incorrect');
+                    allAnswered = false;
+                } else if (selected.value === answers[qName].correct) {
+                    score += 20;
+                    resultDiv.innerHTML = `<strong>Benar!</strong> Jawaban Anda (${selected.value}).<br><br><em>Pembahasan:</em> ${answers[qName].explanation}`;
+                    resultDiv.classList.add('correct');
+                } else {
+                    resultDiv.innerHTML = `<strong>Kurang Tepat.</strong> Jawaban yang benar adalah <strong>${answers[qName].correct}</strong>.<br><br><em>Pembahasan:</em> ${answers[qName].explanation}`;
+                    resultDiv.classList.add('incorrect');
+                }
+            }
+
+            // Menampilkan nilai akhir tanpa menggunakan alert()
+            const finalScoreDiv = document.getElementById('final-score');
+            if(allAnswered) {
+                finalScoreDiv.innerHTML = `Pemeriksaan selesai!<br><strong>Nilai Anda: ${score} / 100</strong>`;
+                finalScoreDiv.style.display = 'block';
+            } else {
+                finalScoreDiv.innerHTML = `Terdapat soal yang belum dijawab.<br><strong>Nilai Sementara Anda: ${score} / 100</strong>`;
+                finalScoreDiv.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
